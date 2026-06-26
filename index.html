@@ -17,7 +17,7 @@
         const videoId = "OXKXbbfhA-4";
         const iframe = document.getElementById('ytplayer');
         
-        // Restart every \~110 minutes for 2hr video
+        // Force restart every \~110 minutes
         setInterval(() => {
             iframe.src = https://www.youtube.com/embed/\( {videoId}?autoplay=1&loop=1&playlist= \){videoId}&modestbranding=1&controls=0&rel=0&mute=1;
         }, 110 * 60 * 1000);
@@ -27,7 +27,7 @@
             location.reload();
         }, 4 * 60 * 60 * 1000);
         
-        console.log("🚀 2HR Shadow Farm ACTIVE - Muted Autoplay Looping");
+        console.log("🚀 2HR Chrome Shadow Farm ACTIVE - Muted & Looping");
     </script>
 </body>
 </html>
