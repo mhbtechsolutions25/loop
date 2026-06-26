@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>YT 2HR Loop Farm</title>
+    <title>YT 2HR Shadow Farm</title>
     <style>body { margin:0; background:black; overflow:hidden; }</style>
 </head>
 <body>
-    <iframe
-        id="ytplayer"
-        width="640" height="360"
-        src="https://www.youtube.com/embed/OXKXbbfhA-4?autoplay=1&loop=1&playlist=OXKXbbfhA-4&modestbranding=1&controls=0&rel=0"
-        frameborder="0"
+    <iframe 
+        id="ytplayer" 
+        width="640" height="360" 
+        src="https://www.youtube.com/embed/OXKXbbfhA-4?autoplay=1&loop=1&playlist=OXKXbbfhA-4&modestbranding=1&controls=0&rel=0&mute=1" 
+        frameborder="0" 
         allow="autoplay; encrypted-media">
     </iframe>
 
     <script>
-        const videoId = "OXKXbbfhA-4";  // Clean ID only - no ?si crap
-
+        const videoId = "OXKXbbfhA-4";
         const iframe = document.getElementById('ytplayer');
-
-        // Restart every \~110 minutes (2hr safety margin - prevents stuck loops)
+        
+        // Restart every \~110 minutes for 2hr video
         setInterval(() => {
-            iframe.src = https://www.youtube.com/embed/\( {videoId}?autoplay=1&loop=1&playlist= \){videoId}&modestbranding=1&controls=0&rel=0;
+            iframe.src = https://www.youtube.com/embed/\( {videoId}?autoplay=1&loop=1&playlist= \){videoId}&modestbranding=1&controls=0&rel=0&mute=1;
         }, 110 * 60 * 1000);
-
-        // Backup full reload every 4 hours
+        
+        // Backup reload every 4 hours
         setInterval(() => {
             location.reload();
         }, 4 * 60 * 60 * 1000);
-
-        console.log("🚀 2HR Shadow Loop Farm ACTIVE - Cooking watch hours");
+        
+        console.log("🚀 2HR Shadow Farm ACTIVE - Muted Autoplay Looping");
     </script>
 </body>
 </html>
